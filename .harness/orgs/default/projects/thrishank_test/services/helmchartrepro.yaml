@@ -1,0 +1,5 @@
+service:
+  name: helm-chart-repro
+  identifier: helmchartrepro
+  orgIdentifier: default
+  projectIdentifier: thrishank_test

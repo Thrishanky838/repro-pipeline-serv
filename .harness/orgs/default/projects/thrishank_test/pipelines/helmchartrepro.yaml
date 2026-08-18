@@ -1,0 +1,25 @@
+pipeline:
+  name: helm-chart-repro
+  identifier: helmchartrepro
+  tags: {}
+  projectIdentifier: thrishank_test
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: test
+        identifier: test
+        tags: {}
+        template:
+          templateRef: helmchartrepro1
+          versionLabel: "1"
+          templateInputs:
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>

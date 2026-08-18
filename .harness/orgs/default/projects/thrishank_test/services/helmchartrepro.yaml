@@ -3,3 +3,23 @@ service:
   identifier: helmchartrepro
   orgIdentifier: default
   projectIdentifier: thrishank_test
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: nginx
+            type: HelmChart
+            spec:
+              store:
+                type: Http
+                spec:
+                  connectorRef: http_helm_bitnami
+              optionalValuesYaml: false
+              chartName: nginx
+              chartVersion: <+input>
+              subChartPath: ""
+              helmVersion: V3
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              fetchHelmChartMetadata: false
+    type: NativeHelm

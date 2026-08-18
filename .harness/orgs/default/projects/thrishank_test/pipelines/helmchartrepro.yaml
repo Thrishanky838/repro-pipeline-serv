@@ -21,14 +21,4 @@ pipeline:
                 serviceOverrideInputs: <+input>
                 infrastructureDefinitions: <+input>
               service:
-                serviceRef: helmchartrepo
-                serviceInputs:
-                  serviceDefinition:
-                    type: NativeHelm
-                    spec:
-                      manifests:
-                        - manifest:
-                            identifier: nginx
-                            type: HelmChart
-                            spec:
-                              chartVersion: <+input>
+                serviceRef: helmchartrepro

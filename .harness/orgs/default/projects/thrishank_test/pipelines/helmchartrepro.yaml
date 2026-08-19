@@ -28,7 +28,7 @@ pipeline:
                     spec:
                       manifests:
                         - manifest:
-                            identifier: nginx
+                            identifier: redis
                             type: HelmChart
                             spec:
                               chartVersion: <+input>

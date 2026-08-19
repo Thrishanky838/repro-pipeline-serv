@@ -7,7 +7,7 @@ service:
     spec:
       manifests:
         - manifest:
-            identifier: nginx
+            identifier: redis
             type: HelmChart
             spec:
               store:
@@ -15,7 +15,7 @@ service:
                 spec:
                   connectorRef: http_helm_bitnami
               optionalValuesYaml: false
-              chartName: nginx
+              chartName: redis
               chartVersion: <+input>
               subChartPath: ""
               helmVersion: V3
